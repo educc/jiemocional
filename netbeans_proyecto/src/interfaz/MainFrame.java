@@ -72,6 +72,16 @@ public class MainFrame extends javax.swing.JFrame {
                     App.NAME, JOptionPane.INFORMATION_MESSAGE);
         }
     }
+    
+    /**
+     * Abre un nuevo TEST, borrando el anterior
+     */
+    
+    private void abrirNuevoTest(){
+        user = new Usuario();
+        TestDialog dialog = new TestDialog(this, true, user);
+        dialog.setVisible(true);
+    }
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -207,9 +217,18 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
-        user = new Usuario();
-        TestDialog dialog = new TestDialog(this, true, user);
-        dialog.setVisible(true);
+        if( user.isEmpty() ){
+            abrirNuevoTest();
+        }else {
+            int opt = JOptionPane.showConfirmDialog
+                    (this, "Ya existe un test guardado.\n¿Desear realizar "
+                    + "un nuevo test, borrando el anterior?", 
+                    App.NAME, JOptionPane.YES_NO_CANCEL_OPTION);
+            if( opt == JOptionPane.OK_OPTION){
+                abrirNuevoTest();
+            }
+        }
+        
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed

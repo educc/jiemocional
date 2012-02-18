@@ -54,6 +54,7 @@ public class TestDialog extends javax.swing.JDialog {
         } catch (ClassNotFoundException ex) {
             //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        jScrollPane1.getVerticalScrollBar().setUnitIncrement(50);
         cargarEscala(nescala);
     }
     
@@ -186,8 +187,8 @@ public class TestDialog extends javax.swing.JDialog {
                     listItemsPanels.add(pnl);
                     pnlItems.add(pnl);
                     i++;
-                }
-                //jScrollPane1.getViewport().setViewPosition( new Point(0,0) );      
+                }   
+                //jScrollPane1.getVerticalScrollBar().set
                 this.lblAvance.setText( nescala + "/" + Escala.TOTAL_ESCALAS);
                 pnlItems.updateUI();    
             }
@@ -220,6 +221,7 @@ public class TestDialog extends javax.swing.JDialog {
 
         pnlBak.setLayout(new java.awt.BorderLayout());
 
+        norPanel.setPreferredSize(new java.awt.Dimension(240, 70));
         norPanel.setLayout(new java.awt.BorderLayout());
 
         lblTituloEscala.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
@@ -232,6 +234,7 @@ public class TestDialog extends javax.swing.JDialog {
         txtaDescripcionEscala.setLineWrap(true);
         txtaDescripcionEscala.setRows(5);
         txtaDescripcionEscala.setWrapStyleWord(true);
+        txtaDescripcionEscala.setPreferredSize(new java.awt.Dimension(240, 40));
         norPanel.add(txtaDescripcionEscala, java.awt.BorderLayout.CENTER);
 
         pnlBak.add(norPanel, java.awt.BorderLayout.NORTH);
@@ -242,6 +245,7 @@ public class TestDialog extends javax.swing.JDialog {
         surPanel.add(lblAvance, java.awt.BorderLayout.WEST);
 
         btnGuardar.setText("Siguiente");
+        btnGuardar.setPreferredSize(new java.awt.Dimension(102, 32));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
