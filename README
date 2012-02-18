@@ -1,1 +1,12 @@
 Test de inteligencia emocional
+
+Consta de 2 aplicaciones:
+
+Primera:
+Software personal para realizar el test de inteligencia emocional.
+Lista todas las preguntas y sus alternativas para responder.
+La salida del programa es un resumen de la conclusión del test y un archivo a enviar al psicólogo o tutor que esté realizando el test para más detalles.
+
+Segunda:
+Software para crear un archivo ".csv" detallado con todas las preguntas y respuestas del test (del archivo exportado del primer software).
+
