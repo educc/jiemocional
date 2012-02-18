@@ -29,7 +29,9 @@ public class TestDialog extends javax.swing.JDialog {
     
     private Escala escala; //la escala que se muestra actual
     private List<ItemPanel> listItemsPanels;
+    
     private Color verde = new java.awt.Color(230, 249, 232);
+    private Color naranja = Color.ORANGE;
     
     public TestDialog(java.awt.Frame parent, boolean modal, Usuario user) {
         super(parent, modal);
@@ -55,12 +57,19 @@ public class TestDialog extends javax.swing.JDialog {
         cargarEscala(nescala);
     }
     
+    /**
+     * TRUE: si todos los items son seleccionados
+     * Los ITEMs faltantes se resaltan a naranja
+     * @return 
+     */
+    
     private boolean validarIngresoItems(){
         boolean correcto = true;
         
         for(ItemPanel pnl: listItemsPanels){
             if( pnl.indicadorSelected() == -1){
                 correcto = false;
+                pnl.setColor(naranja);
             }
         }
         
@@ -169,10 +178,10 @@ public class TestDialog extends javax.swing.JDialog {
                     pnl.setOpaque(true);
                     if( i%2 == 0){
                         pnl.setColor(verde);
-                        pnl.setBackground(verde);
+                        pnl.setDefaultColor(verde);
                     }else{
                         pnl.setColor(Color.WHITE);
-                        pnl.setBackground(Color.WHITE);
+                        pnl.setDefaultColor(Color.WHITE);
                     }
                     listItemsPanels.add(pnl);
                     pnlItems.add(pnl);

@@ -4,6 +4,8 @@ package interfaz;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
@@ -26,6 +28,7 @@ public class ItemPanel extends JPanel {
     private String[] strNames;
     private ButtonGroup groupbuton;
     private JPanel panel;
+    private Color oldColor;
     
     private int indSeleccted; //indicador seleccionado
     
@@ -37,6 +40,7 @@ public class ItemPanel extends JPanel {
         this.item = item;
         strNames = strnames;
         indSeleccted = -1;
+        oldColor = Color.WHITE;
         initComponents();
     }
     
@@ -54,6 +58,14 @@ public class ItemPanel extends JPanel {
             for(int i = 0; i < TOTAL_RBUTTONS; i++){
                 btnRadios[i] = new JRadioButton( strNames[i] );
                 btnRadios[i].setOpaque(false);
+                btnRadios[i].addActionListener(new ActionListener() {
+
+                    @Override
+                    public void actionPerformed(ActionEvent ae) {
+                        setColor(oldColor);
+                    }
+                });
+                
                 if( App.DEBUG ){
                     btnRadios[i].setSelected(true);
                 }
@@ -75,6 +87,17 @@ public class ItemPanel extends JPanel {
     }
     
     /**
+     * Color por defecto para el panel, para cuando
+     * el se presiona cualquier radioBoton cambie de
+     * calor
+     * @param acolor 
+     */
+    
+    public void setDefaultColor(Color acolor){
+       oldColor = acolor; 
+    }
+    
+    /**
      * Fija el color a todo el panel
      * @param color 
      */
@@ -87,8 +110,11 @@ public class ItemPanel extends JPanel {
         }
         textArea.setOpaque(true);
         textArea.setBackground(color);*/
+        //textArea.setBackground(color);
+        
         panel.setOpaque(true);
         panel.setBackground(color);
+        this.setBackground(color);
     }
     
     /**
