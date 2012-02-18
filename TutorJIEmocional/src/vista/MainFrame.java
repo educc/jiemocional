@@ -37,12 +37,13 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnQuitar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listArchivos = new javax.swing.JList();
         btnConvertir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle(App.NAME);
+        setTitle(App.NAME + ": " + App.VERSION);
 
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
 
@@ -55,6 +56,9 @@ public class MainFrame extends javax.swing.JFrame {
         btnQuitar.setText("<html><b>Quitar</b></html>");
         btnQuitar.setPreferredSize(new java.awt.Dimension(125, 60));
         jPanel1.add(btnQuitar);
+
+        jLabel1.setText("<html><blockquote>Exporta a hojas de cálculo detallado<br>el archivo generado por JIEmocional</blockquote></html>");
+        jPanel1.add(jLabel1);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.NORTH);
 
@@ -69,7 +73,7 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().add(btnConvertir, java.awt.BorderLayout.PAGE_END);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-399)/2, (screenSize.height-426)/2, 399, 426);
+        setBounds((screenSize.width-597)/2, (screenSize.height-518)/2, 597, 518);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -94,6 +98,7 @@ public class MainFrame extends javax.swing.JFrame {
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnConvertir;
     public javax.swing.JButton btnQuitar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JList listArchivos;
