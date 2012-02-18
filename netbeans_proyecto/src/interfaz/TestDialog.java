@@ -35,10 +35,11 @@ public class TestDialog extends javax.swing.JDialog {
     private Color verde = new java.awt.Color(230, 249, 232);
     private Color naranja = Color.ORANGE;
     
-    public TestDialog(java.awt.Frame parent, boolean modal, Usuario user) {
+    public TestDialog(java.awt.Frame parent, boolean modal, Usuario user, Datadb db) {
         super(parent, modal);
         initComponents();
         this.user = user;
+        this.db = db;
         initOtherComponents();
     }
     
@@ -49,13 +50,6 @@ public class TestDialog extends javax.swing.JDialog {
         lblTituloEscala.setVisible(false);
         this.lblAvance.setText( nescala + "/" + Escala.TOTAL_ESCALAS);
         this.setTitle("Test de inteligencia emocional");
-        try {
-            db = new Datadb();
-        } catch (SQLException ex) {
-            //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(50);
         cargarEscala(nescala);
     }
@@ -105,33 +99,7 @@ public class TestDialog extends javax.swing.JDialog {
         }
         return isLast;
     }
-    
-    private void mostrarResultados(){
-        try {
-            String[] nameEscalas = db.nombresEscalas();
-            int[] puntajes = user.puntajes();
-            int[] max = user.maxPuntajes();
-            
-            String message = "<html><b><font size=13>Resultados:</font></b><br>";
-            int limit = puntajes.length;
-            for(int i = 0; i < limit; i++){
-                message += "<b>" + nameEscalas[i] + "</b>";
-                message += ":" + String.valueOf( puntajes[i] );
-                message += "/" + String.valueOf( max[i] );
-                message += "<br>";
-            }
-            message += "</html>";
-            
-            JOptionPane.showMessageDialog
-                    (this, message, App.NAME, JOptionPane.INFORMATION_MESSAGE);
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog
-                    (this, 
-                    "No se puede mostrar los resultados", 
-                    App.NAME, JOptionPane.ERROR_MESSAGE);
-        }
-    }
+   
     
     /**
      * Guarda en un fichero en el directorio
@@ -274,7 +242,7 @@ public class TestDialog extends javax.swing.JDialog {
                     (this,"Ha terminado el test. "
                     + "Ahora ya es posible exportarlo.",
                     App.NAME, JOptionPane.INFORMATION_MESSAGE);
-            mostrarResultados();
+            //mostrarResultados();
             dispose();
         }
     }//GEN-LAST:event_btnGuardarActionPerformed

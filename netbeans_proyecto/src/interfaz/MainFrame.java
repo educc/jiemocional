@@ -10,11 +10,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.instrument.IllegalClassFormatException;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import logica.Datadb;
 import logica.Usuario;
 
 /**
@@ -23,6 +26,7 @@ import logica.Usuario;
  */
 public class MainFrame extends javax.swing.JFrame {
     private Usuario user;
+    private Datadb db;
     
     public MainFrame() {
         initComponents();
@@ -31,15 +35,50 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void initOtherComponents(){
         user = new Usuario();
-        
-        try {    
+        try {
+            db = new Datadb();
             user.load();
-        } catch (FileNotFoundException ex) {
-            //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalClassFormatException ex) {
-            //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog
+                    (this, 
+                    ex.getMessage(), 
+                    App.NAME, JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    /**
+     * Muestra un cuadro de diálogo con los resultados
+     * del test. Resultados de forma general
+     */
+     
+    private void mostrarResultados(){
+        try {
+            ResultadosDialog dialog = new ResultadosDialog(this, true);
+            
+            String[] nameEscalas = db.nombresEscalas();
+            int[] puntajes = user.puntajes();
+            int[] max = user.maxPuntajes();
+            
+            String message = "<html><b><font size=10>Resultados:</font></b><br>";
+            int limit = puntajes.length;
+            for(int i = 0; i < limit; i++){
+                message += "<b>" + nameEscalas[i] + "</b>:";
+                message += "<br>    " + String.valueOf( puntajes[i] );
+                message += "/" + String.valueOf( max[i] );
+                message += "<br>";
+            }
+            message += "</html>";
+            
+            dialog.lblMensaje.setText(message);
+            dialog.setVisible(true);
+            //JOptionPane.showMessageDialog
+                    //(this, message, App.NAME, JOptionPane.INFORMATION_MESSAGE);
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog
+                    (this, 
+                    "No se puede mostrar los resultados", 
+                    App.NAME, JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -84,7 +123,7 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (IOException ex) {
             //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        TestDialog dialog = new TestDialog(this, true, user);
+        TestDialog dialog = new TestDialog(this, true, user, db);
         dialog.setVisible(true);
     }
 
@@ -109,6 +148,8 @@ public class MainFrame extends javax.swing.JFrame {
         lblDescripcion = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnResultados = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(App.NAME);
@@ -149,10 +190,10 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridy = 3;
         pnlBack.add(btnContinuar, gridBagConstraints);
 
-        jLabel2.setText("<html>\nSi ya ah empezado un test, puede continuarlo, <br>este programa guarda sus cambios automáticamente.\n</html>");
+        jLabel2.setText("<html>\nMuestra una tabla con los resultados generales <br>\ndel Test.\n</html>");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 20, 10, 0);
         pnlBack.add(jLabel2, gridBagConstraints);
@@ -166,18 +207,18 @@ public class MainFrame extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridy = 5;
         pnlBack.add(btnExportar, gridBagConstraints);
 
         jLabel3.setText("<html>Exporta en un fichero el test ya terminado, <br>necesario para su procesamiento por parte del tutor.</html>");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 20, 10, 0);
         pnlBack.add(jLabel3, gridBagConstraints);
 
-        lblTitulo.setFont(new java.awt.Font("Ubuntu", 1, 24));
+        lblTitulo.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         lblTitulo.setText("Test de Inteligencia Emocional");
         lblTitulo.setToolTipText("");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -186,7 +227,7 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         pnlBack.add(lblTitulo, gridBagConstraints);
 
-        lblDescripcion.setFont(new java.awt.Font("Ubuntu", 0, 14));
+        lblDescripcion.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         lblDescripcion.setText("Test de inteligencia emocional basado en el trabajo de del psicólogo Iskia Xasswer");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -204,16 +245,36 @@ public class MainFrame extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 6;
         pnlBack.add(jButton1, gridBagConstraints);
 
         jLabel4.setText("Información sobre el autor del programa y versión.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.insets = new java.awt.Insets(10, 20, 10, 0);
         pnlBack.add(jLabel4, gridBagConstraints);
+
+        jLabel5.setText("<html>\nSi ya ah empezado un test, puede continuarlo, <br>este programa guarda sus cambios automáticamente.\n</html>");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(10, 20, 10, 0);
+        pnlBack.add(jLabel5, gridBagConstraints);
+
+        btnResultados.setText("Ver resultados");
+        btnResultados.setPreferredSize(new java.awt.Dimension(150, 32));
+        btnResultados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResultadosActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        pnlBack.add(btnResultados, gridBagConstraints);
 
         getContentPane().add(pnlBack, java.awt.BorderLayout.CENTER);
 
@@ -248,7 +309,7 @@ public class MainFrame extends javax.swing.JFrame {
                     + "se ha empezado ningún test.", 
                     App.NAME, JOptionPane.INFORMATION_MESSAGE);
         }else{
-            TestDialog dialog = new TestDialog(this, true, user);
+            TestDialog dialog = new TestDialog(this, true, user, db);
             dialog.setVisible(true);    
         }
         
@@ -263,16 +324,28 @@ public class MainFrame extends javax.swing.JFrame {
         frm.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnResultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultadosActionPerformed
+        if( user.isCompletado() ){
+            mostrarResultados();
+        }else{
+            JOptionPane.showMessageDialog
+                    (this, "Debe haber terminado de responder el test.", 
+                    App.NAME, JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_btnResultadosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnContinuar;
     private javax.swing.JButton btnExportar;
     private javax.swing.JButton btnNuevo;
+    private javax.swing.JButton btnResultados;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlBack;

@@ -13,6 +13,6 @@ public class App {
     public static String DEV = "Edward Cacho Casas";
     public static String EMAIL = "edward1738@gmail.com";
     
-    public static boolean DEBUG = false;
+    public static boolean DEBUG = true;
     
 }
