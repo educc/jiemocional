@@ -104,7 +104,9 @@ public class Usuario {
     }
     
     /**
-     * Guarda en un fichero de texto plano
+     * Guarda en un fichero de texto plano, con
+     * el siguiente formato:
+     * [0-9]{1,2}-[0-9]{1,3}-[0123]-[0123]
      * @throws IOException 
      */
     

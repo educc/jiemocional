@@ -6,6 +6,7 @@
 package interfaz;
 
 import java.awt.Color;
+import java.awt.Rectangle;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -188,9 +189,9 @@ public class TestDialog extends javax.swing.JDialog {
                     pnlItems.add(pnl);
                     i++;
                 }   
-                //jScrollPane1.getVerticalScrollBar().set
                 this.lblAvance.setText( nescala + "/" + Escala.TOTAL_ESCALAS);
                 pnlItems.updateUI();    
+                
             }
         } catch (SQLException ex) {
             existe = false;
