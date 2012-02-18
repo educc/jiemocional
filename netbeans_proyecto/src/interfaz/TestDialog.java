@@ -159,7 +159,7 @@ public class TestDialog extends javax.swing.JDialog {
                     i++;
                 }   
                 this.lblAvance.setText( nescala + "/" + Escala.TOTAL_ESCALAS);
-                pnlItems.updateUI();    
+                //pnlItems.updateUI();    
                 
             }
         } catch (SQLException ex) {

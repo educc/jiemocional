@@ -63,9 +63,9 @@ public class MainFrame extends javax.swing.JFrame {
             int limit = puntajes.length;
             for(int i = 0; i < limit; i++){
                 message += "<b>" + nameEscalas[i] + "</b>:";
-                message += "<br>    " + String.valueOf( puntajes[i] );
-                message += "/" + String.valueOf( max[i] );
-                message += "<br>";
+                message += "<br><blockquote>" + String.valueOf( puntajes[i] );
+                message += "/" + String.valueOf( max[i] ) + "</blockquote>";
+                message += "<hr />";
             }
             message += "</html>";
             
