@@ -79,6 +79,11 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void abrirNuevoTest(){
         user = new Usuario();
+        try {
+            user.save();
+        } catch (IOException ex) {
+            //Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         TestDialog dialog = new TestDialog(this, true, user);
         dialog.setVisible(true);
     }
