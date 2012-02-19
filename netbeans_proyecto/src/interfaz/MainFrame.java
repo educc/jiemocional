@@ -18,6 +18,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import logica.Datadb;
+import logica.Escala;
 import logica.Usuario;
 
 /**
@@ -63,8 +64,8 @@ public class MainFrame extends javax.swing.JFrame {
             int limit = puntajes.length;
             for(int i = 0; i < limit; i++){
                 message += "<b>" + nameEscalas[i] + "</b>:";
-                message += "<br><blockquote>" + String.valueOf( puntajes[i] );
-                message += "/" + String.valueOf( max[i] ) + "</blockquote>";
+                message += "<br><blockquote>" + Escala.getRendimiento(i+1, puntajes[i]);
+                message += "</blockquote>";
                 message += "<hr />";
             }
             message += "</html>";
@@ -228,7 +229,7 @@ public class MainFrame extends javax.swing.JFrame {
         pnlBack.add(lblTitulo, gridBagConstraints);
 
         lblDescripcion.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        lblDescripcion.setText("Test de inteligencia emocional basado en el trabajo de del psicólogo Iskia Xasswer");
+        lblDescripcion.setText("Test de inteligencia emocional basado en el trabajo del psicólogo Iskia Xasswer");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -256,7 +257,7 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(10, 20, 10, 0);
         pnlBack.add(jLabel4, gridBagConstraints);
 
-        jLabel5.setText("<html>\nSi ya ah empezado un test, puede continuarlo, <br>este programa guarda sus cambios automáticamente.\n</html>");
+        jLabel5.setText("<html> Si ya ha empezado un test, puede continuarlo, <br>este programa guarda sus cambios automáticamente. </html>");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;

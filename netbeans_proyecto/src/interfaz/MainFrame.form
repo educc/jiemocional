@@ -141,7 +141,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Ubuntu" size="14" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Test de inteligencia emocional basado en el trabajo de del psic&#xf3;logo Iskia Xasswer"/>
+            <Property name="text" type="java.lang.String" value="Test de inteligencia emocional basado en el trabajo del psic&#xf3;logo Iskia Xasswer"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -177,7 +177,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;Si ya ah empezado un test, puede continuarlo, &lt;br&gt;este programa guarda sus cambios autom&#xe1;ticamente.&#xa;&lt;/html&gt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt; Si ya ha empezado un test, puede continuarlo, &lt;br&gt;este programa guarda sus cambios autom&#xe1;ticamente. &lt;/html&gt;"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">

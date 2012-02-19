@@ -1,0 +1,6 @@
+0.1 estable:
+	+ botón ver resultados en la ventana principal
+	+ resultados se muestra en resumen: optimo, diestro, cautela …
+	+ se resalta items que faltan por responder al dar clic en 
+"siguiente escala"
+	+ se corrigé falta de ortografía en el panel principal
