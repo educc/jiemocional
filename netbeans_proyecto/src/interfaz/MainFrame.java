@@ -65,6 +65,7 @@ public class MainFrame extends javax.swing.JFrame {
             for(int i = 0; i < limit; i++){
                 message += "<b>" + nameEscalas[i] + "</b>:";
                 message += "<br><blockquote>" + Escala.getRendimiento(i+1, puntajes[i]);
+                //message += "<br>" + puntajes[i] + "/" + max[i];
                 message += "</blockquote>";
                 message += "<hr />";
             }
