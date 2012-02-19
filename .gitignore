@@ -1,4 +1,5 @@
 .DS_Store
+.jti
 netbeans_proyecto/build/*
 netbeans_proyecto/dist/*
 TutorJIEmocional/build/*
