@@ -22,6 +22,10 @@ public class Datadb {
         String strRutadb = 
                 System.getProperty("user.dir") + File.separator + 
                 "ie.db";
+        //strRutadb = getClass().getResource("/datos/ie.db").toExternalForm();
+        
+        //System.out.println(strRutadb);
+        
         db = new Conexiondb("",0, strRutadb,"","", Conexiondb.SQLITE);
         db.abrirConexion();
     }

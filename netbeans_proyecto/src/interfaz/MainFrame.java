@@ -7,13 +7,8 @@
 package interfaz;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.instrument.IllegalClassFormatException;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -42,8 +37,10 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog
                     (this, 
-                    ex.getMessage(), 
+                    "Error al cargar los datos o información del usuario\n" +
+                    "No es posible continuar, la aplicación se cerrará.", 
                     App.NAME, JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
         }
     }
     
@@ -73,8 +70,6 @@ public class MainFrame extends javax.swing.JFrame {
             
             dialog.lblMensaje.setText(message);
             dialog.setVisible(true);
-            //JOptionPane.showMessageDialog
-                    //(this, message, App.NAME, JOptionPane.INFORMATION_MESSAGE);
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog
