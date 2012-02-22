@@ -10,7 +10,7 @@
  */
 package vista;
 
-import controlador.MainFrameControlador;
+import controlador.MainFrameController;
 import javax.swing.UIManager;
 
 /**
@@ -22,7 +22,7 @@ public class MainFrame extends javax.swing.JFrame {
     /** Creates new form MainFrame */
     public MainFrame() {
         initComponents();
-        MainFrameControlador control = new MainFrameControlador(this);
+        MainFrameController control = new MainFrameController(this);
     }
 
     /** This method is called from within the constructor to

@@ -7,10 +7,15 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import modelo.ConvertIE;
 import vista.App;
 import vista.MainFrame;
 
@@ -18,11 +23,11 @@ import vista.MainFrame;
  *
  * @author edward
  */
-public class MainFrameControlador {
+public class MainFrameController {
     private MainFrame frame;
-    private DefaultListModel<File> model;
+    private DefaultListModel model;
     
-    public MainFrameControlador(MainFrame frame){
+    public MainFrameController(MainFrame frame){
         this.frame = frame;
         //listFiles = new ArrayList();
         initActions();
@@ -57,13 +62,33 @@ public class MainFrameControlador {
         });
     }
     
-
+    private void convertirFichero(File file){
+        String strError = "";
+        try {
+            ConvertIE.convert(file);
+            
+        } catch (FileNotFoundException ex) {
+            strError = "Archivo no encontrado.\n";
+        } catch (IOException ex) {
+            strError += "Error desconocido: " + ex.toString();
+            strError += "\n";
+        } catch (Exception ex) {
+            strError += "Error desconocido: " + ex.toString();
+            strError += "\n";
+        }
+        System.out.println(strError);
+        //JOptionPane.showMessageDialog(this, strError, App.NAME, JOptionPane.INFORMATION_MESSAGE);
+    }
     
     //ACCIONES DE BOTONES
     
     private void actionConvertir(ActionEvent e){
         if( !model.isEmpty() ){
-            
+            int limit = model.getSize();
+            for(int i = 0; i < limit; i++){
+                File afile = (File) model.get(i);
+                convertirFichero(afile);
+            }
         }else{
             JOptionPane.showMessageDialog
                     (frame, "Debe al menos abrir un archivo para convertir.", 
