@@ -1,7 +1,9 @@
 0.1.1 estable:
-	+ corección de texto y valores del test. Fundamental para la correcta evaluación del test.
+	+ correcci—n de texto y valores del test. Fundamental para la correcta evaluaci—n del test.
 	+ uso de la nueva versión de base de datos 3.1.1
-	+ se corrigé el nombre del psicólogo en la interfaz principal del programa
+	+ se corrige el nombre del psic—logo en la interfaz principal del programa
+	+ correction de la versi—n del programa
+	+ los ficheros exportados se guardan con extensi—n .jti
 0.1 estable:
 	+ bot—n ver resultados en la ventana principal
 	+ resultados se muestra en resumen: optimo, diestro, cautela É
