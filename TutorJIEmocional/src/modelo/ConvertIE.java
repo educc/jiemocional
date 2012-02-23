@@ -43,9 +43,9 @@ public class ConvertIE {
         {265,2},
         {283,2},
         {297,2},
-        {0,2},
-        {0,2},//20
-        {0,2}
+        {333,2},
+        {349,2},//20
+        {361,2}
     };
     
     /**
@@ -71,21 +71,23 @@ public class ConvertIE {
         
         int limit = user.data.length;
         int row, col;
-        row = ODS_ROWS_ESCALAS[0][0];
+        row = ODS_ROWS_ESCALAS[0][0]-1;
         col = ODS_ROWS_ESCALAS[0][1];
         int oldIdEscala = 1;
         for(int i = 0; i < limit; i++){
             int idEscala = user.data[i][0];
             
             if( oldIdEscala == idEscala ){
+                row++;
                 Cell celda = tblDetalle.getCellByPosition(col + user.data[i][3], row);
                 celda.setDisplayText( String.valueOf( user.data[i][2]) );
-                
-                row++;
             }else{
                 oldIdEscala = idEscala;
                 row = ODS_ROWS_ESCALAS[idEscala-1][0];
                 col = ODS_ROWS_ESCALAS[idEscala-1][1];
+                
+                Cell celda = tblDetalle.getCellByPosition(col + user.data[i][3], row);
+                celda.setDisplayText( String.valueOf( user.data[i][2]) );
             }
         }
         /*

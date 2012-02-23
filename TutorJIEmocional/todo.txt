@@ -1,0 +1,4 @@
+* mejorar lista con indicador Estado (listo, procesado, por procesar)
+* al convertir seleccionar directorio para colocar todos los ficheros
+* no guardar con nombre .jti.ods
+* manual de ayuda
