@@ -1,6 +1,8 @@
 .DS_Store
 .jti
-netbeans_proyecto/build/*
-netbeans_proyecto/dist/*
-TutorJIEmocional/build/*
-TutorJIEmocional/dist/*
+
+#obviando directorios
+!netbeans_proyecto/build
+!netbeans_proyecto/dist
+!TutorJIEmocional/build
+!TutorJIEmocional/dist
