@@ -94,7 +94,7 @@ public class MainFrame extends javax.swing.JFrame {
             if( opt == JFileChooser.APPROVE_OPTION){
                 File file = fchooser.getSelectedFile();
                 try {
-                    user.save(file);
+                    user.save(new File(file.getAbsolutePath() + ".jti") );
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog
                         (this, "Imposible guardar.\nDetalles:\n" +
