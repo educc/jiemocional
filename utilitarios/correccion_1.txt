@@ -1,0 +1,261 @@
+1;Despedido o renunció o se jubiló
+2;Nuevo empleo o compañía
+3;Nuevo tipo de trabajo
+4;Reducción o reorganización en la compañía
+5;Algún otro cambio en el trabajo, no incluido en la lista anterior que le produjo angustia
+6;Pérdida económica o reducción de ingresos
+7;Muerte de un amigo intimo o miembro de familia
+8;Mudanza o traslado
+9;Su separación o divorcio
+10;Su matrimonio
+11;Compró una nueva casa
+12;Fue víctima de un delito, asalto o atentado
+13;Nacimiento de un hijo, adopción, hijastros u otras personas allegadas al hogar
+14;Complicaciones en el sistema judicial
+15;Seria enfermedad personal o heridas
+16;Seria enfermedad o lesiones de un amigo cercano o miembro de la familia
+17;Aumento de responsabilidades de cuidar de un pariente viejo o inválido
+18;Cualquier otro cambio no incluido en la lista anterior que le produjo angustia
+19;Seguridad del empleo
+20;Relaciones con el jefe inmediato
+21;Cambio de prioridades en el trabajo
+22;Relaciones con compañeros de trabajo
+23;Oportunidad de avanzar y desarrollarse
+24;Exceso de trabajo
+25;Control de la carga de trabajo
+26;Falta de flexibilidad para hacer frente a emergencias personales o familiares
+27;V´citima de favoritismo o injusticia en políticas de contratación y ascensos en el trabajo
+28;Constante vigilancia de su desempeño en el oficio
+29;Trabajo aburrido o poco interesante
+30;Especial reconocimiento o premio en su oficio
+31;Presión por conflicto de fechas limites
+32;Pérdida de devoción al trabajo
+33;Se siente aprisionado en el papeleo e incapaz de realizar cosa alguna
+34;Flexibilidad de horas de trabajo
+35;El transporte de ida y regreso al trabajo
+36;Dificultades financieras
+37;Aumento de responsabilidades de cuidar de un adulto viejo o un pariente inválido
+38;Desavenencia con socio o cónyuge
+39;Crianza de un hijo
+40;Estar separado del cónyuge
+41;Deterioro de la salud personal
+42;Encontrar quién cuide del niño o problemas con actual situación de dicho cuidado
+43;No tiene tiempo suficiente para pasar con los que están más cerca de usted
+44;Vecindario peligroso o inseguro
+45;Relaciones con un pariente cercano (padres, hermanos, yernos)
+46;Conflictos sexuales o frustraciones
+47;Conflicto trabajo-familiar
+48;Soledad o falta de intimidad
+49;Cuestiones de fecundidad o reproducción
+50;Puedo nombrar mis sentimientos
+51;He aprendido mucha acerca de mí mismo escuchando mis sentimientos
+52;Soy consciente de mis sentimientos la mayor parte del tiempo
+53;Sé cuando me estoy alterando
+54;Cuando estoy triste, sé por qué
+55;Me juzgo a mi mismo por la manera como creo que los demás me ven
+56;Gozo de mi vida emocional
+57;Me asustan las personas que muestran fuertes emociones
+58;A veces quisiera ser otra persona
+59;Presto atención a mi estado físico para entender mis sentimientos
+60;Acepto mis sentimientos como propios
+61;Les hago saber a los demás cuándo están haciendo un buen trabajo
+62;Expreso mis emociones aún cuando sean negativas
+63;Les hago saber a los demás lo que quiero y lo que necesito
+64;Mis amigos más cercanos dirían que yo expreso mi aprecio por ellos
+65;Me guardo mis sentimientos para mí solo
+66;Les hago saber a los demás cuando sentimientos desagradables intervienen en la manera como trabajamos
+67;Me cuesta trabajo pedir ayuda cuando la necesito
+68;Al tratar con los demás puedo percibir cómo se sienten
+69;Haría cualquier cosa por no parecer tonto ante mis compañeros
+70;Puedo reconocer las emociones de otros mirándolos a los ojos
+71;Me cuesta trabajo hablar con personas que no comparten mis puntos de vista
+72;Me concentro de las cualidades positivas de los demás
+73;Rara vez siento ganas de reñir a otro
+74;Pienso cómo se sentirán los demás antes de expresar mi opinión
+75;Con cualquiera que hablo siempre lo escucho con atención
+76;Puedo presentir el ánimo de un grupo cuando entro en un salón
+77;Yo puedo hacer que personas que acabo de conocer hablen de sí mismas
+78;Sé leer entre líneas  cuando alguien está hablando
+79;Generalmente sé como piensan los demás sobre mí
+80;Puedo presentir los sentimientos de una persona aunque no lo exprese con palabras
+81;Cambio mi expresión emocional según la persona con quien esté
+82;Sé cuando un amigo está preocupado
+83;Puedo excluir toda distracción cuando tengo que concentrarme
+84;Generalmente termino lo que comienzo
+85;Sé decir no cuando es necesario
+86;Sé recompensarme a mí mismo después de alcanzar una meta
+87;Puedo hacer a un lado las recompensas a corto plazo a cambio de una meta a largo plazo
+88;Puedo concentrarme completamente en una tarea cuando es necesario
+89;Hago cosas que después me arrepiento
+90;Acepto la responsabilidad de manejar mis emociones
+91;Cuando me veo con un problema me gusta despacharlo lo más pronto posible
+92;Pienso qué es lo que quiero antes de actuar
+93;Puedo aplazar mi satisfacción personal a cambio de una meta más grande
+94;Cuando estoy de mal humor puedo superarlo hablando
+95;Me da rabia cuando me critican
+96;No sé cuál es el origen en mi enfado en muchas situaciones
+97;He recomendado proyectos novedosos a mi compañía
+98;Participo en compartir información e ideas
+99;Sueño con el futuro para ayudarme a pensar hacia dónde voy
+100;Mis mejores ideas me vienen cuando no estoy pensando en ellas
+101;Tengo ideas brillantes que me han venido de pronto y ya completamente formadas
+102;Tengo un buen sentido de cuándo las ideas tendrán éxito o fracasarán
+103;Me fascinan los conceptos nuevos e inusuales
+104;He implementado proyectos novedosos en mi compañía
+105;Me entusiasman las ideas y soluciones nuevas
+106;Me desempeño bien haciendo tormentas de ideas para generar opciones sobre un problema
+107;Puedo reaccionar después de haberme sentido desilusionado
+108;Puedo realizar lo que necesito si me dedico a ello
+109;Obstáculos o problemas en mi vida han producido cambios inesperados para mejorar
+110;Encuento fácil esperar con paciencia cuando es necesario
+111;Siempre hay más de una respuesta correcta
+112;Sé cómo dar satisfacción a todas las partes de mí mismo
+113;No me gusta dejar para mañana lo que se pueda hacer hoy
+114;Temo ensayar otra vez una cosa que ya me ha fallado antes
+115;Pienso que hay problemas por los cuales no vale la pena preocuparse
+116;Yo me despreocupo cuando la tensión aumenta
+117;Puedo ver al aspecto humorístico de las situaciones
+118;A menudo dejo una cosa a un lado por un tiempo para obtener una nueva perspectiva
+119;Cuando encuentro un problema me concentro en qué se puede hacer para resolverlo
+120;Puedo lamentarme cuando pierdo algo que es muy importante para mi
+121;Me siento incómodo cuando alguien se acerca demasiado a mí emocionalmente
+122;Tengo varios amigos con quienes puedo contar en caso de dificultades
+123;Muestro indicador1 amor y afecto a mis amigos
+124;Cuando tengo un problema, sé a quién acudir o qué hacer para ayudar a resolverlo
+125;Mis creencias y valores guían mi conducta diaria
+126;Mi familia está siempre conmigo cuando la necesito
+127;Dudo de que mis colegas realmente me aprecien como persona
+128;Me cuesta trabajo hacer amistades
+129;Rara vez lloro
+131;Puedo contradecir con eficacia para producir un cambio
+132;No expresaría mis sentimientos si creyera que con ello causaría un desacuerdo
+133;En el fondo, yo sólo puedo confiar en mí mismo para hacer las cosas
+134;Permanezo en calma aun en situaciones en que los demás se irritan
+135;Es mejor no alborotar problemas si se pueden evitar
+136;Me cuesta trabajo obtener consenso de mi equipo de trabajo
+137;Pido retroinformación a mis colegas sobre mi rendimiento
+138;Tengo habilidad para organizar y motivar grupos de personas
+139;Me gusta hacer frente a los problemas en el trabajo y resolverlos
+140;Escucho la crítica con mente abierta y la acepto cuando es justa
+141;Dejo que las cosas crezcan hasta el punto crítico antes de hablar de ellas
+142;Cuando hago un comentario crítico, me concentro en la conducta y no en la persona
+143;Evito las disputas
+144;Yo puedo ver la mortificación de los demás, aunque no la mencionen
+145;Puedo leer las emociones de la gente por sus ademanes
+146;Actúo con ética en mi trato con los demás
+147;No vacilaría en hacer un esfuerzo extra por ayudar a una persona que esté en dificultades
+148;Tengo en cuenta los sentimientos de los demás en mi trato con ellos
+149;Me puedo poner en el lugar de otra persona
+150;Hay personas a quienes jamás perdono
+151;Puedo perdonarme a mí mismo por no ser perfecto
+152;Cuando tengo éxito en algo, me parece que podía haberlo hecho mejor
+153;Ayudo a los demás a quedar bien en situaciones difíciles
+154;Constantemente me preocupo por mis deficiencias
+155;Envidio a los que tienen más que yo
+156;Veo el lado bueno de las cosas
+157;Amo mi vida
+158;Sé que puedo encontrar soluciones a problemas difíciles
+159;Creo que las cosas generalmente salen bien
+160;Continuamente me he visto frustrado en la vida por la mala suerte
+162;Me gusta ser el que soy
+163;Veo los retos como oportunidades para aprender
+164;Bajo presión estoy seguro de que encontraré una solución
+165;A veces tengo la solución correcta sin tener las razones
+166;Mis corazonadas suelen ser acertadas
+167;Visualizo mis metas futuras
+168;Puedo ver el producto terminado o el cuadro antes de que estén completos
+169;Creo en mis sueños aun cuando otros no los vean ni los entiendan
+170;Cuando me veo ante una elección difícil, sigo mi corazón
+171;Presto atención cuando las cosas no me parecen del todo bien
+172;Una vez que me he decidido, rara vez cambio de opinión
+173;La gente dice que yo soy un visionario
+174;Cuando alguien presenta una opinión distinta de la mía, me cuesta trabajo aceptarla
+175;Uso mis reacciones intuitivas para tomar decisiones difíciles
+176;Todos se aprovecharía de mí si yo los dejara
+177;Confío en los demás hasta que tenga razones para no confiar
+178;Tengo cuidado para decidirme a confiar en una persona
+179;Respeto a mis colegas
+181;Las personas parecidas a mí en mi compañía han recibido más beneficios que yo v.gr., aumentos de sueldo, ascensos, oportunidades, recompensas, etc
+182;Las personas a quienes trato son dignas de confianza
+183;Parece que yo siempre salgo defraudado
+184;Muy poco en la vida es justo o equitativo
+185;Cuando algo no funciona, yo trato de presentar un plan alterno
+186;Cuando conozco a una persona nueva, descubro muy poco de información personal sobre mí mismo
+187;Yo puedo lograr que las cosas se hagan
+188;La suerte hace un papel muy importante en mi vida
+189;Encuentro inútil luchar con la jerarquía establecida en mi compañía
+190;Las circunstancias están fuera de mi control
+191;Necesito reconocimiento de los demás para que mi trabajo valga la pena
+192;Es fácil que los demás gusten de mí
+193;Me cuesta mucho trabajo aceptar cumplidos
+194;Tengo la habilidad de conseguir lo que quiero
+195;Siento que controlo mi vida
+196;Si reflexiono sobre mi vida, podría sentir que básicamente no soy feliz
+197;Me siento asustado y creo que no tengo control de las cosas cuando éstas cambian rápidamente
+198;Me gusta encargarme de una cosa
+199;Yo sé lo que quiero y lo busco
+201;Cuando cometo un error estoy dispuesto a reconocerlo
+202;Siento que estoy engañando a los demás
+203;Si no me apasionara mi trabajo, cambiaría de oficio
+204;Mi oficio es una extensión de mi sistema personal de valores
+205;Jamás digo una mentira
+206;Encuentro que me dejo llevar por una situación aun cuando no esté de acuerdo con ella
+207;Exagero mis habilidades para poder avanzar
+208;Digo la verdad aun cuando sea difícil
+209;He hecho en mi oficio cosas contrarias a mis principios
+210;Dolor de espalda
+211;Poblemas de peso (pérdida o exceso de peso)
+212;Dolores de cabeza
+213;Jaquecas
+214;Catarros o problemas respiratorios
+215;Porblemas del estómago (gases frecuentes, síndrome de irritabilidad intestinal, o úlceras)
+216;Dolor de pecho
+217;Dolores inexplicables
+218;Otros dolores crónicos no anotados en la lista anterior
+219;Alimentación (pérdida del apetito, como con exceso, no tengo tiempo de comer)
+220;Fumo
+221;Tomo calmantes
+222;Tomo aspirina u otros analgésicos
+223;Tomo otras drogas
+224;Huyo de las relaciones estrechas o cercanas
+225;Critico, culpo o ridiculizo a los demás
+226;Me siento víctima, o siento que se aprovechan de mí
+227;Veo TV más de dos horas al día
+228;Practico juegos de video o computador, o uso la internet (más de dos horas al día)
+229;Me fastidian las personas con quienes me encuentro
+230;Accidentes o heridas
+231;Me cuesta trabajo concentrarme
+232;Me abruma el trabajo
+233;Me distraigo fácilmente
+234;No puedo quitarme una cosa de la cabeza y estoy siempre preocupado
+235;Me siento deprimido, desalentado o sin esperanza
+236;Me siento solo
+237;Pierdo la memoria
+238;Me siento fatigado o abrumado
+239;Me cuesta trabajo resolverme o tomar decisiones
+240;Me cuesta trabajo empezar o tranquilizarme
+241;Estoy muy satisfecho con mi vida
+242;Me siento enérgico, feliz y lleno de salud
+243;Tengo sentimiento de paz interior y bienestar
+244;Necesitaría hacer indicador1s cambios en mi vida para ser realmente feliz
+245;Mi vida satisface mis más hondas necesidades
+246;He obtenido menos de lo que esperaba de la vida
+247;Me gusta ser exactamente como soy
+248;Para mi el trabajo es una diversión
+249;He encontrado trabajo significativo
+250;Voy por un camino que me trae satisfacción
+251;He aprovechado al máximo mis capacidades
+252;Hay personas con quienes me conecto a un nivel más hondo
+253;Soy franco con las personas cercanas a mi y ellas lo son conmigo
+254;He amado profundamente a otra persona
+255;Generalmente encuentro personas con quienes hacer vida social
+256;Soy capaz de hacer compromisos a largo plazo con otra persona
+257;Sé que soy importa para los que están más cerca de mí
+258;Encuentro fácil decirles a los demás
+259;Estoy satisfecho con mi desempeño en el trabajo
+260;Mis compañeros de trabajo dirían que yo facilito buenas comunicaciones entre los miembros de mi grupo
+261;Me siento distante en el trabajo y no participante
+262;Me es difícil prestar atención a las tareas de trabajo
+263;En mi equipo de trabajo participo en la toma de decisiones
+264;Me cuesta trabajo cumplir los compromisos o completar las tareas
+265;Mi rendimiento en el trabajo es siempre el mejor de que soy capaz
