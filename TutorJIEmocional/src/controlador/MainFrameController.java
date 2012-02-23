@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import modelo.ConvertIE;
 import modelo.JTIModel;
@@ -127,11 +126,6 @@ public class MainFrameController {
     private void convertirTodo(String path){
         int limit = model.size();
         
-        frame.pbarEstado.setMinimum(0);
-        frame.pbarEstado.setMaximum(limit);
-        frame.pbarEstado.setValue(0);
-        frame.pbarEstado.updateUI();
-        
         for(int i = 0; i < limit; i++){
             File afile = (File) model.get(i);
             if( convertirFichero(afile, path) ){
@@ -139,11 +133,7 @@ public class MainFrameController {
             }else{
                 model.setImage(i, JTIModel.IMAGE_ERROR);
             }
-            frame.pbarEstado.setValue(i);
-            frame.pbarEstado.updateUI();
         }
-        frame.pbarEstado.setValue( limit );
-        frame.pbarEstado.updateUI();
     }
     
     //ACCIONES DE BOTONES

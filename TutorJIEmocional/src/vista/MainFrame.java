@@ -60,7 +60,6 @@ public class MainFrame extends javax.swing.JFrame {
         pnlSur = new javax.swing.JPanel();
         btnConvertir = new javax.swing.JButton();
         btnAboutMe = new javax.swing.JButton();
-        pbarEstado = new javax.swing.JProgressBar();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtDirectorio = new javax.swing.JTextField();
@@ -101,10 +100,6 @@ public class MainFrame extends javax.swing.JFrame {
         btnAboutMe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/recursos/info.png"))); // NOI18N
         btnAboutMe.setToolTipText("Información acerca del programa");
         pnlSur.add(btnAboutMe, java.awt.BorderLayout.WEST);
-
-        pbarEstado.setToolTipText("Estado de progreso de la conversión de archivos");
-        pbarEstado.setPreferredSize(new java.awt.Dimension(146, 25));
-        pnlSur.add(pbarEstado, java.awt.BorderLayout.SOUTH);
 
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
@@ -157,7 +152,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JProgressBar pbarEstado;
     public javax.swing.JPanel pnlNorte;
     private javax.swing.JPanel pnlSur;
     public javax.swing.JTable tableArchivos;
