@@ -2,3 +2,5 @@
 * al convertir seleccionar directorio para colocar todos los ficheros
 * no guardar con nombre .jti.ods
 * manual de ayuda
+* mejorar la tabla resumen del ods
+* llenar la tabla resumen desde el programa
