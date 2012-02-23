@@ -225,7 +225,7 @@ public class MainFrame extends javax.swing.JFrame {
         pnlBack.add(lblTitulo, gridBagConstraints);
 
         lblDescripcion.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
-        lblDescripcion.setText("Test de inteligencia emocional basado en el trabajo del psicólogo Iskia Xasswer");
+        lblDescripcion.setText("Test de inteligencia emocional basado en el trabajo del psicólogo PhD Robert K. Cooper");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
