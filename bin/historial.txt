@@ -1,3 +1,6 @@
+0.1.1 estable:
+	+ corección de texto y valores del test. Fundamental para la correcta evaluación del test.
+	+ uso de la nueva versión de base de datos 3.1.1
 0.1 estable:
 	+ bot—n ver resultados en la ventana principal
 	+ resultados se muestra en resumen: optimo, diestro, cautela É

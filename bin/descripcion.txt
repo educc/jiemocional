@@ -1,0 +1,6 @@
+dev
+	binarios con todas los items marcados del test, para pruebas
+historial.txt
+	versionado del programa + cambios
+*zip
+	programa distribuible
