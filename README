@@ -13,6 +13,6 @@ Primera:
 
 Segunda:
 	Nombre:
-		TutorIEmocional
+		TutorJIEmocional
 	Descripción:
-		Software para crear un archivo ".csv" detallado con todas las preguntas y respuestas del test (del archivo exportado del primer software).
+		Software para crear un archivo ".ods" detallado con todas las preguntas y respuestas del test (del archivo exportado del primer software).
