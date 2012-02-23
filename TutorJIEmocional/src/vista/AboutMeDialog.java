@@ -1,14 +1,9 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
  * AboutMe.java
  *
  * Created on 07-ene-2012, 17:16:21
  */
-package interfaz;
+package vista;
 
 
 /**
@@ -52,7 +47,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
 
         centerPanel.setLayout(new java.awt.GridBagLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Descripción:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
@@ -83,7 +78,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(10, 5, 10, 0);
         centerPanel.add(jLabel5, gridBagConstraints);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText(App.VERSION);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -92,7 +87,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(10, 5, 10, 0);
         centerPanel.add(jLabel6, gridBagConstraints);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText(App.DESCRIPCION);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -102,7 +97,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 0);
         centerPanel.add(jLabel7, gridBagConstraints);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Email:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -110,7 +105,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         centerPanel.add(jLabel8, gridBagConstraints);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("edward1738@gmail.com");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -141,7 +136,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
         norPanel.setPreferredSize(new java.awt.Dimension(400, 50));
         norPanel.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText(App.NAME);
         norPanel.add(jLabel1, new java.awt.GridBagConstraints());
@@ -152,24 +147,7 @@ public class AboutMeDialog extends javax.swing.JDialog {
         setBounds((screenSize.width-605)/2, (screenSize.height-295)/2, 605, 295);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
 
-            public void run() {
-                AboutMeDialog dialog = new AboutMeDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel centerPanel;
     private javax.swing.JLabel jLabel1;

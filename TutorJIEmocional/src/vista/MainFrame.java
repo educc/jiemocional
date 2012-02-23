@@ -11,7 +11,10 @@
 package vista;
 
 import controlador.MainFrameController;
+import javax.swing.ImageIcon;
 import javax.swing.UIManager;
+import javax.swing.table.TableColumn;
+import modelo.JTIModel;
 
 /**
  *
@@ -23,6 +26,20 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
         MainFrameController control = new MainFrameController(this);
+       
+        int col [] = {0};
+        int width [] = {30};
+        setWidthColumnas(col, width);
+        tableArchivos.setRowHeight(25);
+    }
+    
+    private void setWidthColumnas(int columna[], int width[]){
+        for(int i=0;i<columna.length;i++){
+            tableArchivos.getColumnModel().getColumn(columna[i]).setMaxWidth(width[i]);
+            tableArchivos.getColumnModel().getColumn(columna[i]).setMinWidth(width[i]);
+            tableArchivos.getTableHeader().getColumnModel().getColumn(columna[i]).setMaxWidth(width[i]);
+            tableArchivos.getTableHeader().getColumnModel().getColumn(columna[i]).setMinWidth(width[i]);
+        }
     }
 
     /** This method is called from within the constructor to
@@ -34,46 +51,82 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlNorte = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnQuitar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listArchivos = new javax.swing.JList();
+        tableArchivos = new javax.swing.JTable();
+        pnlSur = new javax.swing.JPanel();
         btnConvertir = new javax.swing.JButton();
+        btnAboutMe = new javax.swing.JButton();
+        pbarEstado = new javax.swing.JProgressBar();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        txtDirectorio = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(App.NAME + ": " + App.VERSION);
 
-        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
+        pnlNorte.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 0));
 
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/recursos/add.png"))); // NOI18N
         btnAgregar.setText("<html><b>Agregar</b></html>");
         btnAgregar.setPreferredSize(new java.awt.Dimension(125, 60));
-        jPanel1.add(btnAgregar);
+        pnlNorte.add(btnAgregar);
 
         btnQuitar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/recursos/remove.png"))); // NOI18N
         btnQuitar.setText("<html><b>Quitar</b></html>");
         btnQuitar.setPreferredSize(new java.awt.Dimension(125, 60));
-        jPanel1.add(btnQuitar);
+        pnlNorte.add(btnQuitar);
 
         jLabel1.setText("<html><blockquote>Exporta a hojas de cálculo detallado<br>el archivo generado por JIEmocional</blockquote></html>");
-        jPanel1.add(jLabel1);
+        pnlNorte.add(jLabel1);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.NORTH);
+        getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);
 
-        listArchivos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        listArchivos.setVisibleRowCount(0);
-        jScrollPane1.setViewportView(listArchivos);
+        jScrollPane1.setViewportView(tableArchivos);
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        btnConvertir.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        pnlSur.setLayout(new java.awt.BorderLayout());
+
+        btnConvertir.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         btnConvertir.setText("Convertir");
-        getContentPane().add(btnConvertir, java.awt.BorderLayout.PAGE_END);
+        btnConvertir.setToolTipText("");
+        btnConvertir.setPreferredSize(new java.awt.Dimension(99, 32));
+        pnlSur.add(btnConvertir, java.awt.BorderLayout.CENTER);
+
+        btnAboutMe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/recursos/info.png"))); // NOI18N
+        btnAboutMe.setToolTipText("Información acerca del programa");
+        pnlSur.add(btnAboutMe, java.awt.BorderLayout.WEST);
+
+        pbarEstado.setToolTipText("Estado de progreso de la conversión de archivos");
+        pbarEstado.setPreferredSize(new java.awt.Dimension(146, 25));
+        pnlSur.add(pbarEstado, java.awt.BorderLayout.SOUTH);
+
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel2.setText("Directorio de salida:");
+        jPanel1.add(jLabel2);
+
+        txtDirectorio.setEditable(false);
+        txtDirectorio.setText(System.getProperty("user.dir"));
+        txtDirectorio.setToolTipText("Carpeta de salida para los archivos a convertir");
+        txtDirectorio.setPreferredSize(new java.awt.Dimension(400, 25));
+        jPanel1.add(txtDirectorio);
+
+        btnBuscar.setText("Buscar");
+        btnBuscar.setToolTipText("Selecciona un directorio");
+        jPanel1.add(btnBuscar);
+
+        pnlSur.add(jPanel1, java.awt.BorderLayout.NORTH);
+
+        getContentPane().add(pnlSur, java.awt.BorderLayout.SOUTH);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-597)/2, (screenSize.height-518)/2, 597, 518);
+        setBounds((screenSize.width-594)/2, (screenSize.height-663)/2, 594, 663);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -95,12 +148,19 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnAboutMe;
     public javax.swing.JButton btnAgregar;
+    public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnConvertir;
     public javax.swing.JButton btnQuitar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JList listArchivos;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JProgressBar pbarEstado;
+    public javax.swing.JPanel pnlNorte;
+    private javax.swing.JPanel pnlSur;
+    public javax.swing.JTable tableArchivos;
+    public javax.swing.JTextField txtDirectorio;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,8 +11,8 @@ package vista;
 public class App {
     public static String NAME = "TutorJIEmocional";
     public static String DESCRIPCION = 
-            "Programa para exportar "
-            + "a hoja de cálculo el test de inteligencia emocional";
+            "Programa para exportar " +
+            "a hoja de cálculo el test de inteligencia emocional";
     public static String VERSION = "0.1 beta";
     public static String FECHA = "20 Febrero de 2012";
     public static String DEV = "Edward Cacho Casas";

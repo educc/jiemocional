@@ -54,7 +54,7 @@ public class ConvertIE {
      * @param plainfile 
      */
     
-    public static void convert(File plainfile) 
+    public static void convert(File plainfile, String pathFileName) 
             throws FileNotFoundException, IOException, Exception
     {
         if( !formatoCorrecto(plainfile) )
@@ -101,9 +101,7 @@ public class ConvertIE {
          
         */
         
-        doc.save( plainfile.getName() + ".ods");
-        //doc.ge
-        
+        doc.save( pathFileName );
     }
     
     /**
